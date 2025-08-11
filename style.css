@@ -1,0 +1,238 @@
+body {
+  background: #91eff6;
+  background: linear-gradient(
+    90deg,
+    rgba(145, 239, 246, 1) 0%,
+    rgba(173, 238, 233, 1) 16%,
+    rgba(200, 237, 220, 1) 34%,
+    rgba(228, 235, 207, 1) 56%,
+    rgba(228, 235, 207, 1) 80%,
+    rgba(255, 234, 194, 1) 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.corpo {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 600px;
+  /* height: 500px; */
+  min-height: 500px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  /* border-left: 5px solid #fd8f9a; */
+  font-family: "Roboto", sans-serif;
+}
+
+.inicio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: end;
+  column-gap: 24px;
+  row-gap: 0;
+  min-height: 220px;
+  padding-top: 10px;
+}
+
+.social {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  opacity: 50%;
+}
+
+#avatar {
+  width: 150px;
+  justify-self: end;
+  /* float: none; remove o float para o flex funcionar */
+}
+
+#musica {
+  text-align: left;
+  margin: 0;
+  max-width: 300px;
+  font-size: small;
+  color: rgb(54, 54, 54);
+}
+
+.italicomusica {
+  color: #77bdb1;
+}
+
+header h1 {
+  font-family: "Playfair Display", sans-serif;
+  color: #2c7468;
+}
+
+.corpo h1 {
+  font-family: "roboto", sans-serif;
+  color: #2c7468;
+}
+
+.tagline {
+  font-size: small;
+  margin-top: -17px;
+  margin-bottom: 18px;
+}
+
+/* menu */
+
+#menu {
+  background: #8bccc8;
+  height: 39px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+#menu ul,
+#menu li {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+#menu ul {
+  width: 100%;
+  text-align: center;
+}
+
+#menu li {
+  display: inline-block;
+  position: relative;
+}
+
+#menu a {
+  display: block;
+  line-height: 39px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+#menu li a:hover {
+  color: #2c7468;
+  background: #e4f2f0;
+}
+
+#menu a.dropdown-arrow:after {
+  content: "\25BE";
+  margin-left: 5px;
+}
+
+/* things */
+/* receita */
+
+.receita h1 {
+  font-family: "roboto";
+}
+
+
+/* 3) remova o hack que bagunça o fluxo */
+.receita p{
+  font-size: 10px;
+  color: grey;
+  margin: 6px 0 8px;       /* em vez de margin-bottom: -25px */
+}
+
+
+.receita ul,
+ol {
+  font-family: "roboto";
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 12px;
+  max-width: 32ch;
+}
+
+/* layout: coluna do título + coluna do conteúdo */
+.receita .ingredientes,
+.receita .preparo {
+  display: grid;
+  grid-template-columns: max-content max-content; /* colunas do tamanho do conteúdo */
+  column-gap: 16px;
+  align-items: end;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+/* h2 “apontando” pro centro do card */
+.receita h2 {
+  margin: 0;
+  font-style: italic;
+  color: #77bdb1;
+  text-align: right; /* encosta o h2 no meio */
+}
+
+/* listas normais, sem padding gigante */
+.receita .ingredientes ul,
+.receita .preparo ol {
+  margin: 0;
+  padding-left: 1.1rem; /* só o recuo do marcador/números */
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  text-align: left;
+}
+
+/* seu bullet fofinho */
+.ingredientes ul {
+  list-style: "⟡ ";
+}
+
+.preparo ol li::marker {
+  font-weight: 700;        /* deixa só o número em negrito */
+  color: #2C7468;          /* opcional */
+}
+
+/* 1) zera as margens que empurram o separador */
+.receita { margin-bottom: 0; }
+.preparo  { margin-bottom: 0; }     /* você já tinha, mantenha */
+.galeria  { margin-top: 0; }
+.galeria h1 { margin-top: 0; }      /* h1 tem margem-top grande por padrão */
+
+.receita, .galeria {
+  max-width: 540px; margin-inline: auto;
+}
+
+
+
+div {
+  border: solid;
+  border-color: red;
+}
+
+
+/* galeria */
+
+.galeria img {
+  width: 100px;
+  filter: grayscale();
+}
+
+.galeria img:hover {
+  transform: scale(1.2);
+  position: relative; /* fica por cima dos vizinhos */
+  z-index: 1;
+  /* opcional: */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  filter: none;
+}
+
+/* 2) evita margem grande do título da galeria empurrar o separador */
+.galeria h1{ margin: 0 0 12px; }   /* zera o topo */
+
+
+/* separador */
+
