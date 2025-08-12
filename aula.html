@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anotações</title>
+    <style>
+        ul {
+            list-style: kannada;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <nav>
+            <ul>
+                <li><a href="#semantica">Semântica</a></li>
+                <li><a href="#multimidia">Multimídia</a></li>
+                <li><a href="">Agrupamento</a></li>                
+                <li><a href="">Formulário</a></li>
+                <li><a href="">Botões</a></li>
+                <li><a href="">Tabela</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <hr>
+
+<!--
+    <div>    
+        <h1>formulários</h1>
+        <p>&lt;form&gt; - formulários</p>
+        <input type="text">	
+        <input type="radio">
+        <input type="checkbox">	
+        <input type="button">	
+        <input type="submit">	
+    </div>
+-->
+    <main>
+        <section id="semantica">
+            <h1>> layout semantica e agrupamento</h1>
+            <p>as tags semanticas ajudam a organizar o conteúdo.</p>
+            <section>
+                <h2>exemplo agrupamento</h2>
+                <p><code>fieldset</code> é útil para agregar controles relacionados dentro de um formulário</p>
+                <fieldset>
+                    <legend>dados de exemplo</legend>
+                    <p>nome: <strong>nome</strong></p>
+                    <p>email: <strong>email@email.com</strong></p>
+                </fieldset>
+            </section>
+        </section>
+    
+        <hr>
+
+        <article>
+            <h2>> multimídia</h2>
+            <audio controls>
+                <source src="audio.mp3">
+            </audio>
+        </article>
+
+        <hr>
+
+        <form action="#" method="post">
+            <label for="nome">nome:</label>
+            <input type="text" name="" id="nome" placeholder="nome completo">
+            
+            <br>
+
+            <label for="password">password:</label>
+            <input type="password" name="" id="password" placeholder="senha">
+            
+            <br>
+
+            <label for="nascimento">data de nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento">
+
+            <br>
+
+            <label for="curso">curso:</label>
+            <select name="curso" id="">
+                <option value="op1">a</option>
+                <option value="op2">b</option>
+                <option value="op3">c</option>
+            </select>
+        </form>
+    <hr>
+    
+    <h2>tabelaaaaaaaaa</h2>
+    <table border="1">
+            <caption>alunos e notas</caption>
+            <thead>
+                <th>nº</th>
+                <th>nome</th>
+                <th>nota</th>
+                <th>situação</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>ana</td>
+                    <td>8.5</td>
+                    <td>aprovada</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>bruno</td>
+                    <td>0</td>
+                    <td>REPROVADO</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>fulaninho</td>
+                    <td>10</td>
+                    <td>aprovado</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">média</td>
+                    <td>6.1</td>
+                </tr>
+            </tfoot>
+        </tbody>
+    </table>
+
+    <br>
+
+    <table border="1">
+        <caption>frutas</caption>
+        <thead>
+            <th>produto</th>
+            <th>preço</th>
+            <th>quantidade</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>banana</td>
+                <td>R$ 73.979</td>
+                <td>2</td>
+            </tr>
+
+            <tr>
+                <td>melão</td>
+                <td>R$ 9.347.837</td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td>manga</td>
+                <td>R$ 1.000.000.000</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <label for="text">nome:</label>
+    <input type="text" placeholder="nome">
+
+    <br>
+
+    <label for="email">email:</label>
+    <input type="email" placeholder="seuemail@email.com">
+
+    <br>
+
+    <label for="nascimento">data de nascimento:</label>
+    <input type="date" name="" id="">
+
+    <br>
+
+    <input type="submit">
+
+    </main>
+
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+body {
+  background: #91eff6;
+  background: linear-gradient(
+    90deg,
+    rgba(145, 239, 246, 1) 0%,
+    rgba(173, 238, 233, 1) 16%,
+    rgba(200, 237, 220, 1) 34%,
+    rgba(228, 235, 207, 1) 56%,
+    rgba(228, 235, 207, 1) 80%,
+    rgba(255, 234, 194, 1) 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.corpo {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 600px;
+  /* height: 500px; */
+  min-height: 500px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  /* border-left: 5px solid #fd8f9a; */
+  font-family: "Roboto", sans-serif;
+}
+
+.social {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  opacity: 50%;
+}
+
+/* galeria */
+
+.galeria img {
+  width: 100px;
+  filter: grayscale();
+}
+
+.galeria img:hover {
+  transform: scale(1.2);
+  position: relative; /* fica por cima dos vizinhos */
+  z-index: 1;
+  /* opcional: */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  filter: none;
+}
+
+/* 2) evita margem grande do título da galeria empurrar o separador */
+.galeria h1{ margin: 0 0 12px; }   /* zera o topo */
+
+
+/* menu */
+
+#menu {
+  background: #8bccc8;
+  height: 39px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+#menu ul,
+#menu li {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+#menu ul {
+  width: 100%;
+  text-align: center;
+}
+
+#menu li {
+  display: inline-block;
+  position: relative;
+}
+
+#menu a {
+  display: block;
+  line-height: 39px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+#menu li a:hover {
+  color: #2c7468;
+  background: #e4f2f0;
+}
+
+#menu a.dropdown-arrow:after {
+  content: "\25BE";
+  margin-left: 5px;
+}

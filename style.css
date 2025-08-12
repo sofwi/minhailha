@@ -87,6 +87,175 @@ header h1 {
   margin-bottom: 18px;
 }
 
+
+
+/*------------ things ------------*/
+
+/* receita */
+
+.receita ul,
+ol {
+  font-family: "roboto";
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 12px;
+  max-width: 32ch;
+}
+
+/* layout: coluna do título + coluna do conteúdo */
+.receita .ingredientes,
+.receita .preparo {
+  display: grid;
+  grid-template-columns: max-content max-content; /* colunas do tamanho do conteúdo */
+  column-gap: 16px;
+  align-items: end;
+  justify-content: center;
+  margin: 0;
+}
+
+/*tirou o espaço do botton*/
+.receita .preparo { 
+   margin-bottom: 0;
+   margin-top: 16px;
+ }
+
+
+/* listas normais, sem padding gigante */
+.receita .ingredientes ul,
+.receita .preparo ol {
+  margin: 0;
+  padding-left: 1.1rem; /* só o recuo do marcador/números */
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  text-align: left;
+}
+
+/* seu bullet fofinho */
+.ingredientes ul {
+  list-style: "⟡ ";
+}
+.ingredientes ul li::marker{
+  font-weight: 400;
+  color: #2C7468;
+}
+
+.preparo ol li::marker {
+  font-weight: 700;        /* deixa só o número em negrito */
+  color: #2C7468;          /* opcional */
+}
+
+.preparo ol li {
+  margin-bottom: 4px; /* ou 8px */;
+}
+
+
+/* 1) zera as margens que empurram o separador */
+.receita { margin-bottom: 0; }
+.preparo  { margin-bottom: 0; }     /* você já tinha, mantenha */
+
+
+.galeria  { margin-top: 0; }
+.galeria h1 { margin-top: 0; }      /* h1 tem margem-top grande por padrão */
+
+.receita, .galeria {
+  max-width: 540px; margin-inline: auto;
+}
+
+/* título receita */
+
+.receita h2 {
+  margin: 0;
+  font-style: italic;
+  color: #77bdb1;
+  text-align: right; /* encosta o h2 no meio */
+
+}
+
+.receita h1 {
+ margin-top: 0;
+}
+
+#receitinha {
+  font-size: 11px;
+  margin: 0;
+  display: block;
+  color: rgb(59, 59, 59);
+  margin-bottom: -6px;
+}
+
+/* tentativa de consertar o título da galeria */
+
+.titlesection {
+  margin: 0 0 16px;
+}
+
+/* galeria */
+
+.galeria img {
+  width: auto;
+  height: 135px;
+  object-fit: cover; /* EXTRA corta sem deformar */
+  
+  filter: grayscale();
+}
+
+.galeria img:hover {
+  transform: scale(1.2);
+  position: relative; /* fica por cima dos vizinhos */
+  z-index: 1;
+  /* opcional: */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  filter: none;
+}
+
+/* 2) evita margem grande do título da galeria empurrar o separador
+.galeria h1{ margin: 0 0 12px; }    zera o topo 
+*/
+
+
+.galeria figure {
+margin: 0;
+display: contents;
+}
+
+/* continuação galeria */
+
+/* Título ocupa a linha inteira */
+.galeria h1 {
+  flex: 0 0 100%;
+  margin: 0 0 12px;
+}
+
+/* Galeria: layout simples em flex */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#imgsolo {
+
+}
+
+#figblock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+/* separador */
+
+.separador {
+  color: #e0b262;
+  font-size: 10px;
+  padding: 10px;
+}
+
+
 /* menu */
 
 #menu {
@@ -132,107 +301,32 @@ header h1 {
   margin-left: 5px;
 }
 
-/* things */
-/* receita */
 
-.receita h1 {
-  font-family: "roboto";
-}
-
-
-/* 3) remova o hack que bagunça o fluxo */
-.receita p{
-  font-size: 10px;
-  color: grey;
-  margin: 6px 0 8px;       /* em vez de margin-bottom: -25px */
-}
-
-
-.receita ul,
-ol {
-  font-family: "roboto";
-  padding-left: 0;
-  padding-right: 0;
-  font-size: 12px;
-  max-width: 32ch;
-}
-
-/* layout: coluna do título + coluna do conteúdo */
-.receita .ingredientes,
-.receita .preparo {
-  display: grid;
-  grid-template-columns: max-content max-content; /* colunas do tamanho do conteúdo */
-  column-gap: 16px;
-  align-items: end;
-  justify-content: center;
-  margin: 16px 0;
-}
-
-/* h2 “apontando” pro centro do card */
-.receita h2 {
-  margin: 0;
-  font-style: italic;
-  color: #77bdb1;
-  text-align: right; /* encosta o h2 no meio */
-}
-
-/* listas normais, sem padding gigante */
-.receita .ingredientes ul,
-.receita .preparo ol {
-  margin: 0;
-  padding-left: 1.1rem; /* só o recuo do marcador/números */
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  text-align: left;
-}
-
-/* seu bullet fofinho */
-.ingredientes ul {
-  list-style: "⟡ ";
-}
-
-.preparo ol li::marker {
-  font-weight: 700;        /* deixa só o número em negrito */
-  color: #2C7468;          /* opcional */
-}
-
-/* 1) zera as margens que empurram o separador */
-.receita { margin-bottom: 0; }
-.preparo  { margin-bottom: 0; }     /* você já tinha, mantenha */
-.galeria  { margin-top: 0; }
-.galeria h1 { margin-top: 0; }      /* h1 tem margem-top grande por padrão */
-
-.receita, .galeria {
-  max-width: 540px; margin-inline: auto;
-}
-
-
-
+/*
 div {
-  border: solid;
-  border-color: red;
+  border: 1px solid red
 }
 
 
-/* galeria */
 
-.galeria img {
-  width: 100px;
-  filter: grayscale();
+*:not(div):not(section):not(article):not(header):not(nav):not(footer) {
+  border: 1px solid rgba(0, 0, 255, 0.274);
 }
 
-.galeria img:hover {
-  transform: scale(1.2);
-  position: relative; /* fica por cima dos vizinhos */
-  z-index: 1;
-  /* opcional: */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  filter: none;
+
+.receita {
+  border: 1px solid yellow;
 }
 
-/* 2) evita margem grande do título da galeria empurrar o separador */
-.galeria h1{ margin: 0 0 12px; }   /* zera o topo */
 
 
-/* separador */
+section {
+  border: 1px solid rgb(217, 255, 0);
+}
 
+
+
+figure {
+  border: 2px solid purple;
+}
+*/
